@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="course1" class="com.example.studentinfo.Course">
+        <property name="courseId" value="C101"/>
+        <property name="title" value="Spring Basics"/>
+    </bean>
+
+    <bean id="course2" class="com.example.studentinfo.Course">
+        <property name="courseId" value="C102"/>
+        <property name="title" value="Data Structures"/>
+    </bean>
+
+    <bean id="course3" class="com.example.studentinfo.Course">
+        <property name="courseId" value="C103"/>
+        <property name="title" value="Databases"/>
+    </bean>
+
+    <bean id="student1" class="com.example.studentinfo.Student">
+        <property name="studentId" value="S001"/>
+        <property name="name" value="Amit"/>
+        <property name="courses">
+            <list>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+                <ref bean="course3"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
